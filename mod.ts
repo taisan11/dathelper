@@ -1,13 +1,13 @@
 export function subjectpaser(subjecttxt: string) {
-    const match = subjecttxt.match(/^(\d+)\.dat<>(.+) \((\d+)\)$/);
+    const match = subjecttxt.match(/^(\d+)\.dat<>(.+) \((\d+)?\)$/);
     if (match) {
       const [_, unixtime, threadName, responseCount] = match;
       const result = {
-        [`${unixtime}`]: [threadName, responseCount],
+        [`${unixtime}`]: [threadName, responseCount || null],
       };
       return result;
     }
-  }
+}
 export function newsubject(subjecttxt: string,title: string,unixtime:number) {
     return `${unixtime}.dat<>${title}\n${subjecttxt}`;
 }
@@ -45,3 +45,9 @@ export function datpaser(dattxt: string) {
   
     return JSON.stringify(result, null, 2);
   }
+export function newdat(name: string,mail: string,message: string,DATAS:number,title: string) {
+    return `${name}<>${mail}<>${DATAS}<>${message}<>${title}`;
+}
+export function postdat(dattxt: string,name: string,mail: string,message: string,DATAS:number) {
+    return `${dattxt}\n${name}<>${mail}<>${DATAS}<>${message}`;
+}
