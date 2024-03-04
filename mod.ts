@@ -11,6 +11,11 @@ export function subjectpaser(subjecttxt: string) {
 export function newsubject(subjecttxt: string,title: string,unixtime:number) {
     return `${unixtime}.dat<>${title}\n${subjecttxt}`;
 }
+/**
+ * Parses a string of data and returns a JSON string representation of the parsed data.
+ * @param dattxt - The string of data to be parsed.
+ * @returns A JSON string representation of the parsed data.
+ */
 export function datpaser(dattxt: string) {
     const lines = dattxt.split("\n");
     const posts: any[] = [];
