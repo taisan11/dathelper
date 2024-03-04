@@ -1,4 +1,4 @@
-export function subjectpaser(subjecttxt: string) {
+export function SubjectPaser(subjecttxt: string) {
     const match = subjecttxt.match(/^(\d+)\.dat<>(.+) \((\d+)?\)$/);
     if (match) {
       const [_, unixtime, threadName, responseCount] = match;
@@ -8,7 +8,7 @@ export function subjectpaser(subjecttxt: string) {
       return result;
     }
 }
-export function newsubject(subjecttxt: string,title: string,unixtime:number) {
+export function NewSubject(subjecttxt: string,title: string,unixtime:number) {
     return `${unixtime}.dat<>${title}\n${subjecttxt}`;
 }
 /**
@@ -16,7 +16,7 @@ export function newsubject(subjecttxt: string,title: string,unixtime:number) {
  * @param dattxt - The string of data to be parsed.
  * @returns A JSON string representation of the parsed data.
  */
-export function datpaser(dattxt: string) {
+export function DatPaser(dattxt: string) {
     const lines = dattxt.split("\n");
     const posts: any[] = [];
     let title = "";
@@ -45,9 +45,9 @@ export function datpaser(dattxt: string) {
   
     return JSON.stringify(result, null, 2);
   }
-export function newdat(name: string,mail: string,message: string,DATAS:number,title: string) {
+export function NewDat(name: string,mail: string,message: string,DATAS:number,title: string) {
     return `${name}<>${mail}<>${DATAS}<>${message}<>${title}`;
 }
-export function postdat(dattxt: string,name: string,mail: string,message: string,DATAS:number) {
+export function PostDat(dattxt: string,name: string,mail: string,message: string,DATAS:number) {
     return `${dattxt}\n${name}<>${mail}<>${DATAS}<>${message}`;
 }
