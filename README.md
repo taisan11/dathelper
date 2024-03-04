@@ -1,15 +1,21 @@
 # dathelper
-
-To install dependencies:
-
+## EN
+This library is a helper for dat files and subject files.
+A dat file is a file used to store threads mainly used in bulletin boards such as 2ch.
+The subject file is a file necessary to display a list of threads used mainly on bulletin boards such as 2ch.
+There are functions to use these files conveniently.
+## JP
+このライブラリはDatファイルとsubjectファイル用のヘルパーです。
+Datファイルは主に2chなどの掲示板で使われてるスレッドを保存するファイルです
+subjectファイルは主に2chなどの掲示板などで使われてるスレッド一覧を表示するために必要なファイルです
+これらのファイルを便利に使用するための関数がそろってます
+## How to use
+**Install**
 ```bash
-bun install
+npx jsr add kejibanhelper
+# and more...
 ```
-
-To run:
-
-```bash
-bun run index.ts
+**Import**
+```ts
+import { subjectpaser,newsubject,datpaser,newdat,postdat } from "kejibanhelper";
 ```
-
-This project was created using `bun init` in bun v1.0.30. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
