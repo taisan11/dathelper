@@ -1,0 +1,13 @@
+{
+  "name": "dathelper",
+  "module": "index.ts",
+  "version": "1.0.0",
+  "type": "module",
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "exports": {
+    ".": "./mod.ts",
+    "./greet": "./greet.ts"
+  }
+}

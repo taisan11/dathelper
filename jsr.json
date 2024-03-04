@@ -1,0 +1,5 @@
+{
+    "name": "@taisan11/kejibanhelper",
+    "version": "0.1.0",
+    "exports": "./mod.ts"
+}
