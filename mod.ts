@@ -1,11 +1,11 @@
-export function SubjectPaser(subjecttxt: string):{[key: string]:(string | null)[]}|undefined|string {
-    const match = subjecttxt.match(/^(\d+)\.dat<>(.+) \((\d+)?\)$/);
+export function SubjectPaser(subjecttxt: string): {[key: string]: (string | null)[]} | undefined | string {
+    const match = subjecttxt.match(/^(\d+)\.dat<>(.+) \((\d+)\)$/);
     if (match) {
-      const [_, unixtime, threadName, responseCount] = match;
-      const result = {
-        [`${unixtime}`]: [threadName, responseCount || null],
-      };
-      return result;
+        const [_, unixtime, threadName, responseCount] = match;
+        const result = {
+            [`${unixtime}`]: [threadName, responseCount || null],
+        };
+        return result;
     }
     return 'error';
 }
