@@ -9,7 +9,7 @@ export function SubjectPaser(subjecttxt: string):{[key: string]:(string | null)[
     }
 }
 export function NewSubject(subjecttxt: string,title: string,unixtime:number):string {
-    return `${unixtime}.dat<>${title}\n${subjecttxt}`;
+    return `${unixtime}.dat<>${title} (1)\n${subjecttxt}`;
 }
 /**
  * Parses a string of data and returns a JSON string representation of the parsed data.
