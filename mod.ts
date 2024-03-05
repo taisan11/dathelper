@@ -1,4 +1,4 @@
-export function SubjectPaser(subjecttxt: string):{[key: string]:(string | null)[]}|undefined {
+export function SubjectPaser(subjecttxt: string):{[key: string]:(string | null)[]}|undefined|string {
     const match = subjecttxt.match(/^(\d+)\.dat<>(.+) \((\d+)?\)$/);
     if (match) {
       const [_, unixtime, threadName, responseCount] = match;
@@ -7,6 +7,7 @@ export function SubjectPaser(subjecttxt: string):{[key: string]:(string | null)[
       };
       return result;
     }
+    return 'error';
 }
 export function NewSubject(subjecttxt: string,title: string,unixtime:number):string {
     return `${unixtime}.dat<>${title} (1)\n${subjecttxt}`;

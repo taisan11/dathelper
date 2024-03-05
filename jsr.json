@@ -1,8 +1,9 @@
 {
     "name": "@taisan11/kejibanhelper",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "exports": {
         ".": "./mod.ts",
-        "./mod": "./mod.ts"
+        "./mod": "./mod.ts",
+        "./kt":"./DHtest.ts"
     }
 }
