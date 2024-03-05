@@ -3,7 +3,7 @@ export function SubjectPaser(subjecttxt: string): {[key: string]: (string | null
     if (match) {
         const [_, unixtime, threadName, responseCount] = match;
         const result = {
-            [`${unixtime}`]: [threadName, responseCount || null],
+            [`${unixtime}`]: [threadName, responseCount],
         };
         return result;
     }
